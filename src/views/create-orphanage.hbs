@@ -41,51 +41,51 @@
     </aside>
 
     <main class="animate-appear with-sidebar">
-      <form action="">
-        <fieldset>
-          <legend>Dados</legend>
+      <form action="save-orphanage" method="post" onsubmit="validate(event)" <fieldset>
+        <legend>Dados</legend>
 
-          <div class="map-container">
-            <div id="mapid"></div>
-            <input type="hidden" name="lat">
-            <input type="hidden" name="lng">
-            <footer>
-              <a href="#" id="select-point">
-                Clique no mapa para adicionar a localização
-              </a>
-            </footer>
-          </div>
+        <div class="map-container">
+          <div id="mapid"></div>
+          <input type="hidden" name="lat">
+          <input type="hidden" name="lng">
+          <footer>
+            <a href="#" id="select-point">
+              Clique no mapa para adicionar a localização
+            </a>
+          </footer>
+        </div>
 
-          <div class="input-block">
-            <label for="name">Nome</label>
-            <input id="name" name="name" required>
-          </div>
-          <div class="input-block">
-            <label for="about">Sobre <span>Máximo de 300 caracteres</span></label>
-            <textarea id="about" name="about" required></textarea>
-          </div>
+        <div class="input-block">
+          <label for="name">Nome</label>
+          <input id="name" name="name" required>
+        </div>
+        <div class="input-block">
+          <label for="about">Sobre <span>Máximo de 300 caracteres</span></label>
+          <textarea id="about" name="about" required></textarea>
+        </div>
 
-          <div class="input-block">
-            <label for="whatsapp">Numero de whatsapp</label>
-            <input id="whatsapp" name="whatsapp" required>
-          </div>
+        <div class="input-block">
+          <label for="whatsapp">Numero de whatsapp</label>
+          <input id="whatsapp" name="whatsapp" required>
+        </div>
 
-          <div class="input-block images">
-            <label for="images">Foto</label>
-            <div class="images-upload" id="images">
-              <div class="new-upload">
-                <input name="images" placeholder="Cole o link da foto aqui" required>
-                <span onclick="deleteField(event)">
-                  <img src="/images/remove-file.svg" alt="Remover Foto">
-                </span>
-              </div>
+        <div class="input-block images">
+          <label for="images">Foto</label>
+          <div class="images-upload" id="images">
+            <div class="new-upload">
+              <input name="images" placeholder="Cole o link da foto aqui" required type="url">
 
-
+              <span onclick="deleteField(event)">
+                <img src="/images/remove-file.svg" alt="Remover Foto">
+              </span>
             </div>
-            <button onclick="addPhotoField()" type="button">
-              <img src="/images/add-file.svg" alt="Nova imagem">
-            </button>
+
+
           </div>
+          <button onclick="addPhotoField()" type="button">
+            <img src="/images/add-file.svg" alt="Nova imagem">
+          </button>
+        </div>
 
         </fieldset>
         <fieldset>
@@ -97,8 +97,8 @@
           </div>
 
           <div class="input-block">
-            <label for="opening_hours">Horario das Visitas</label>
-            <input id="opening_hours" name="opening_hours" required>
+            <label for="open_hours">Horario das Visitas</label>
+            <input id="open_hours" name="open_hours" required>
           </div>
 
           <div class="input-block">
